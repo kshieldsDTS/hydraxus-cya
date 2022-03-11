@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-function c1p2(props) {
+function C1P2(props) {
     return (
         <div>
             <p>The star grows larger in your view, slowly at first, but quickly appears to engulf all those around it. Within moments it dwarfs the moon, and it gains a fiery tail of red and white streaks. You watch as it draws closer, and the clouds part as it crashes through them an into the ocean. The shockwave knocks you from your feet, and all you can hear now is a ringing in your ears. You get to your feet and return to the cliff's edge, where you see a wave, at least one-hundred feet tall, rise from the ocean and slam into the coast below you. </p>
@@ -12,4 +12,4 @@ function c1p2(props) {
     );
 }
 
-export default c1p2;
+export default C1P2;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-function Welcome(props) {
+function C1P1(props) {
     return (
         <div>
             <h1>Chapter 1</h1>
@@ -14,4 +14,4 @@ function Welcome(props) {
     );
 }
 
-export default Welcome;
+export default C1P1;
