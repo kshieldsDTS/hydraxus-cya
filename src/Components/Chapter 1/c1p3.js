@@ -8,6 +8,7 @@ function C1P3(props) {
         setUserInput(ev.target.value)
     }
     function handleSubmit(ev){
+        if (userInput)
         ev.preventDefault();
         console.log('submitted!');
         console.log(userInput);
