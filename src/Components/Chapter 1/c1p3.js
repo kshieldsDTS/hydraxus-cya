@@ -14,6 +14,7 @@ function C1P3(props) {
         console.log(userInput);
     }
     // add logic to find keywords in input and make move based on that.
+    // Not sure how to implement. Convert string to array, then parse the array?
     return (
         <div>
             <p>Your eyes open, and you find yourself in a cold, dimly lit room. You sit up from the simple mat of straw and tattered cloth. A single window with a pair of iron bars allows sunlight to filter in to the room.</p>
