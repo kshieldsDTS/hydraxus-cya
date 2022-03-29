@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import C1P3A from './C1P3A';
 import C1P3B from './C1P3B';
 import C1P3C from './C1P3C';
@@ -16,7 +15,7 @@ function C1P3(props) {
     const [door, setDoor] = useState(false)
     const [room, setRoom] = useState(false)
     const [page, setPage] = useState()
-    function handleSubmit(ev){
+    async function handleSubmit(ev) {
         if (userInput)
         ev.preventDefault();
         const array = userInput.split(" ")
@@ -27,31 +26,40 @@ function C1P3(props) {
         setPage('')
         for (let i = 0; i<array.length; i++) {
             if (array[i] === 'check') {
-                setCheck(true)
+                await setCheck(!check)
             }
             if (array[i] === 'window') {
-                setWindow(true)
+                await setWindow(!check)
             }
             if (array[i] === 'room') {
-                setRoom(true)
+                await setRoom(!check)
             }
             if (array[i] === 'door') {
-                setDoor(true)
+                await setDoor(!check)
             }
+            // checkInput()
         }
-        checkInput()
-    }
-    function checkInput() {
         if (window === true && check === true) {
-            setPage('a')
-        }
-        if (room === true && check === true) {
-			setPage('b');
-		}
-        if (door === true && check === true) {
-			setPage('c');
-		}
+					await setPage('a');
+				}
+				if (room === true && check === true) {
+					await setPage('b');
+				}
+				if (door === true && check === true) {
+					await setPage('c');
+				}
     }
+    // async function checkInput() {
+    //     if (window === true && check === true) {
+    //         await setPage('a')
+    //     }
+    //     if (room === true && check === true) {
+	// 		await setPage('b');
+	// 	}
+    //     if (door === true && check === true) {
+	// 		await setPage('c');
+	// 	}
+    // }
     // add logic to find keywords in input and make move based on that.
     // Not sure how to implement. Convert string to array, then parse the array?
     return (
