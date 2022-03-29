@@ -1,21 +1,29 @@
 import React from 'react';
 import data from '../Assets/chapter1'
+import { useState } from 'react'
 
 function Narrative({id, setId}) {
+    const [userInput, setUserInput] = useState()
     function handleContinue(){
-        setId(id + 1)
+        setId(++id)
+    }
+    function handleChange (ev) {
+        setUserInput(ev.target.value)
     }
     function handleSubmit(ev){
         ev.preventDefault()
+        console.log(userInput);
     }
     return (
         <div>
-            <p>{data[localStorage.getItem("id")].text}</p>
+            <p>{data[id].text}</p>
             {data[id].text2 ? <p>{data[id].text2}</p> : null}
             {data[id].keywords ? <form>
-                <input type='text'></input>
+                <input type='text' onChange={handleChange}></input>
                 <input type='submit' onClick={handleSubmit}></input>
-            </form>: <button onClick={handleContinue}>Continue</button>}
+            </form>
+            : 
+            <button onClick={handleContinue}>Continue</button>}
         </div>
     );
 }

@@ -7,12 +7,23 @@ export const chapter1 = [
     {
         id: 1,
         text: 'test',
+        text2: '',
         keywords: [
-            'check',
-            'window',
-            'door',
-            'room',
-            'bed'
+            {
+                check: 1
+            },
+            {
+                window: 2
+            },
+            {
+                door: 3
+            },
+            {
+                room: 4
+            },
+            {
+                bed: 5
+            }
         ]
     }
 ]
