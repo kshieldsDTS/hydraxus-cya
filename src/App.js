@@ -4,9 +4,6 @@ import { useState } from 'react';
 import Status from './Components/Status'
 import Welcome from './Components/Welcome'
 import Narrative from './Components/Narrative';
-import C1P1 from './Components/Chapter 1/C1P1'
-import C1P2 from './Components/Chapter 1/C1P2'
-import C1P3 from './Components/Chapter 1/C1P3'
 
 function App() {
   const [id, setId] = useState(0)

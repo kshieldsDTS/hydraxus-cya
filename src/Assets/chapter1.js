@@ -7,6 +7,13 @@ export const chapter1 = [
     {
         id: 1,
         text: 'test',
+        keywords: [
+            'check',
+            'window',
+            'door',
+            'room',
+            'bed'
+        ]
     }
 ]
 export default chapter1

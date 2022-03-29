@@ -5,11 +5,17 @@ function Narrative({id, setId}) {
     function handleContinue(){
         setId(id + 1)
     }
+    function handleSubmit(ev){
+        ev.preventDefault()
+    }
     return (
         <div>
-            <p>{data[id].text}</p>
+            <p>{data[localStorage.getItem("id")].text}</p>
             {data[id].text2 ? <p>{data[id].text2}</p> : null}
-            {data[id].options ? <button>{data[id].options}</button> : <button onClick={handleContinue}>Continue</button>}
+            {data[id].keywords ? <form>
+                <input type='text'></input>
+                <input type='submit' onClick={handleSubmit}></input>
+            </form>: <button onClick={handleContinue}>Continue</button>}
         </div>
     );
 }
